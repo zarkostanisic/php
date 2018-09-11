@@ -1,0 +1,19 @@
+- loop1
+Ako je rastojanje izmedju dva robota npr. 2 mesta prvo idemo 3 puta u desno (R). To znaci da se robot1 pozicionirao desno od mrlje robot2, a robot2 pomerio za 3 mesta u desno od svoje pocetne pozicije.
+
+Nakon toga se sa G prebacujemo na loop2 koja treba da se izvrsava 3 puta.
+
+- loop2
+Pri prvom prolazu kroz loop2 robot1 ce otici u levo(L) i postaviti na mrlju robot2 gde ce i ostati do kraja izvrsavanja loop2 posto ce preskociti svaku narednu instrukciju posto se nalazi na mrlji robot2.
+Sto se tice robot1 on ce se pri svakoj instrukciju (L) pomerati za jedno polje u levo dok ne dodje do svoje pocetne pozicije gde ce se sudariti sa robot2.
+
+loop1:
+	R
+	R
+	R
+	G loop2
+
+loop2:
+	S
+	L
+	G loop2
